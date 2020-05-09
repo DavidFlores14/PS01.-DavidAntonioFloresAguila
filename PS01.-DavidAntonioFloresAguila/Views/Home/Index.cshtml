@@ -1,0 +1,41 @@
+﻿@{
+    ViewBag.Title = "Práctica semanal #1";
+}
+
+    <div class="jumbotron">
+        <img src="~/Content/img/ITT Logo.png" class="center-block"/>
+        <h2 class="text-center"> Práctica semanal #1</h2>
+        <h2 class="text-center"> Unidad #3</h2>
+        <h2 class="text-center"> Desarrollo de aplicaciones web</h2>
+        <h2 class="text-center"> Ing. Juan Manuel Hernández Martínez</h2>
+    </div>
+
+    <div class="row">
+        <div class="col-md-4">
+            <h2 class="text-center">Contáctanos </h2>
+            <p>
+                <h4 class="text-center">¿Necesitas ayuda, quieres aportar algo o reportar algún error? <br />¡Contáctame!</h4>
+            </p>
+            <img src="~/Content/img/Contacto.png" width="200" height="200" class="center-block">
+            <p><a class="btn btn-success btn-lg active center-block" @Html.ActionLink("Contacto", "Contact", "Home")></a></p>
+        </div>
+
+        <div class="col-md-4">
+            <h2 class="text-center">Conócenos</h2>
+            <p>
+                <h4 class="text-center">¿Quieres saber más de mi y sobre mi trabajo? <br />¡Ven y conoce más sobre mi!</h4>
+            </p>
+            <img src="~/Content/img/Perfil.jpg" width="200" height="200" class="center-block">
+            <p><a class="btn btn-info btn-lg active center-block" @Html.ActionLink("Conocer", "About", "Home")></a></p>
+        </div>
+
+        <div class="col-md-4">
+            <h2 class="text-center">Ciudades</h2>
+            <p>
+                <h4 class="text-center">¿Tú ciudad no se encuentra o quieres dar alguna sugerencia? <br />¡Registra tu ciudad!</h4>
+            </p>
+            <img src="~/Content/img/Ciudad.jpg" width="200" height="200" class="center-block">
+            <p><a class="btn btn-danger btn-lg active center-block" @Html.ActionLink("Contacto", "Contact", "Home")></a></p>
+        </div>
+
+    </div>

@@ -1,0 +1,65 @@
+﻿@model IEnumerable<PS01._DavidAntonioFloresAguila.Models.Event>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Eventos</h2>
+
+<p>
+    <a class="btn btn-info" @Html.ActionLink("Añadir nuevo", "Create")></a>
+</p>
+<table class="table table-striped">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Nombre)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Capacidad)
+        </th>
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Invitado)
+        </th>
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Fecha)
+        </th>
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Negocio)
+        </th>
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                <span class="glyphicon glyphicon-user"></span> @Html.DisplayFor(modelItem => item.Nombre)
+            </td>
+            <td>
+                <span class="glyphicon glyphicon-home"></span> @Html.DisplayFor(modelItem => item.Capacidad)
+            </td>
+            <td>
+                <span class="glyphicon glyphicon-user"></span> @Html.DisplayFor(modelItem => item.Invitado)
+            </td>
+            <td>
+                <span class="glyphicon glyphicon-calendar"></span> @Html.DisplayFor(modelItem => item.Fecha)
+            </td>
+            <td>
+                <span class="glyphicon glyphicon-shopping-cart"></span> @Html.DisplayFor(modelItem => item.Negocio)
+            </td>
+            <td>
+                @Html.ActionLink("Editar", "Edit", new { id = item.ID }) |
+                @Html.ActionLink("Detalles", "Details", new { id = item.ID }) |
+                @Html.ActionLink("Eliminar", "Delete", new { id = item.ID })
+            </td>
+        </tr>
+    }
+
+</table>
+
+<img src="~/Content/img/BannerEvento.jpg" class="center-block" width="960" height="540" />
+<br />

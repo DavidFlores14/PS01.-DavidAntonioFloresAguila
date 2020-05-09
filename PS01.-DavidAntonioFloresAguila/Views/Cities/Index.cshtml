@@ -1,0 +1,48 @@
+﻿@model IEnumerable<PS01._DavidAntonioFloresAguila.Models.City>
+
+@{
+    ViewBag.Title = "Ciudades";
+}
+
+<h2>Ciudades</h2>
+
+<p>
+    <a class="btn btn-info" @Html.ActionLink("Añadir ciudad", "Create")></a>
+</p>
+<table class="table table-striped">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.NombreC)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Estado)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Pais)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                <span class="glyphicon glyphicon-screenshot"></span>  @Html.DisplayFor(modelItem => item.NombreC)
+            </td>
+            <td>
+                <span class="glyphicon glyphicon-road"></span>  @Html.DisplayFor(modelItem => item.Estado)
+            </td>
+            <td>
+                <span class="glyphicon glyphicon-send"></span> @Html.DisplayFor(modelItem => item.Pais)
+            </td>
+            <td>
+                @Html.ActionLink("Editar", "Edit", new { id = item.ID }) |
+                @Html.ActionLink("Detalles", "Details", new { id = item.ID }) |
+                @Html.ActionLink("Elminar", "Delete", new { id = item.ID })
+            </td>
+        </tr>
+    }
+
+</table>
+<img src="~/Content/img/BannerCiudades.jpg" class="center-block" width="960" height="540" />
+<br />
